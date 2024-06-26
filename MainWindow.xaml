@@ -7,14 +7,18 @@
         mc:Ignorable="d"
         Title="ToDoList" Height="450" Width="800">
     <Grid Background="#FFFDFAF1">
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-        </Grid.ColumnDefinitions>      
+        </Grid.ColumnDefinitions>-->      
         <DockPanel LastChildFill="True" Grid.Column="0" Margin="5 0 10 5">
         <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="26">Список дел</TextBlock>
         <Button DockPanel.Dock="Bottom" MaxWidth="150" MinHeight="20" Padding="5" Click="ButtonRemoveToDo_Click" 
                 Margin="0 5 0 0" Background="#5EBEC4">Удалить дела</Button>
+        <Button DockPanel.Dock="Bottom" Name="ButtonAdd" 
+                ToolTip="При добавлении, дело появится в списке слева, и его придется выполнить" 
+                MaxWidth="150" MinHeight="20" Padding="5" Click="Button_Click_Add_ToDo" 
+                Margin="0 5 0 0" Background="#5EBEC4">Добавить дело</Button>  
             <ListBox Grid.ColumnSpan="3" Background="#FDF5DF" Name="ListToDo">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -27,7 +31,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <DockPanel LastChildFill="True" Grid.Column="1" Margin="10 0 5 5">
+        <!--<DockPanel LastChildFill="True" Grid.Column="1" Margin="10 0 5 5">
             <CheckBox DockPanel.Dock="Top" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 20 0 0" 
                       Name="checkboxEnableToDo" Checked="CheckboxEnableToDo_Checked" 
                       Unchecked="CheckboxEnableToDo_Unchecked">Добавление новых дел</CheckBox>
@@ -46,7 +50,7 @@
                              Name="DescriptionToDo"></TextBox>
                 </StackPanel>
             </GroupBox>
-        </DockPanel>
+        </DockPanel>-->
 
     </Grid>
 </Window>
